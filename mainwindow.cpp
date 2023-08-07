@@ -11,10 +11,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
 
     ui->setupUi(this);
-    ui->pbCoffe->setEnabled(false);
-    ui->pbTea->setEnabled(false);
-    ui->pbMilk->setEnabled(false);
-    ui->pbReset->setEnabled(false);
     menu[100] = "커피";
     menu[150] = "차";
     menu[200] = "우유";
@@ -104,6 +100,7 @@ void MainWindow::on_pbReset_clicked()
                (pb50 ? QString("%1원 : \t%2개\n").arg(50).arg(pb50) : "") +
                (pb10 ? QString("%1원 : \t%2개\n").arg(10).arg(pb10) : "");
     mb.information(this, "잔돈 반환", message);
+    changeMoney(0);
     ui->lcdNumber->display(0);
 
 }
