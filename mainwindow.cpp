@@ -11,6 +11,10 @@ MainWindow::MainWindow(QWidget *parent)
 {
 
     ui->setupUi(this);
+    ui->pbCoffe->setEnabled(false);
+    ui->pbTea->setEnabled(false);
+    ui->pbMilk->setEnabled(false);
+    ui->pbReset->setEnabled(false);
     menu[100] = "커피";
     menu[150] = "차";
     menu[200] = "우유";
