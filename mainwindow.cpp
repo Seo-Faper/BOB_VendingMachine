@@ -97,7 +97,7 @@ void MainWindow::on_pbReset_clicked()
     int pb50 = money / 50;
     money %= 50;
     int pb10 = money / 10;
-
+    money %= 10;
     QString message;
     message += (pb500 ? QString("%1원 : \t%2개\n").arg(500).arg(pb500) : "") +
                (pb100 ? QString("%1원 : \t%2개\n").arg(100).arg(pb100) : "") +
